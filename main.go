@@ -13,7 +13,7 @@ var numberOfQuestions int
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	questions = buildQuestionsList()
+	questions = (&QuestionSource{}).buildQuestionsList()
 
 	// Since the questions can't change during runtime, I can count it once and leave it.
 	// If I decide to allow runtime modifications, I'll need to revisit this however

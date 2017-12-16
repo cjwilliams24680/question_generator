@@ -1,10 +1,23 @@
 package main
 
-type Question struct {
+import "bytes"
 
+type Question struct {
+	parts []*QuestionPart
 }
 
 func (q *Question) generateQuestion() string {
-	// todo take values and generate a string to display
-	return "Who's on first"
+	var buffer bytes.Buffer
+
+	for i, part := range q.parts {
+		if i > 0 {
+			buffer.WriteString(" ")
+		}
+
+		buffer.WriteString(part.getRandomVariant())
+	}
+
+	buffer.WriteString("?")
+
+	return buffer.String()
 }
