@@ -40,7 +40,7 @@ var describe = &QuestionPart{[]string{"Describe", "Talk about", "Walk through"}}
 
 var aCase = &QuestionPart{[]string{"a case of yours", "one of your patients", "a treatment case"}}
 
-var thatWasUnsuccessful = &QuestionPart{[]string{"that was unsuccessful.", "which didn't go well.", "that didn't meet treatment goals."}}
+var thatWasUnsuccessful = &QuestionPart{[]string{"where treatment was unsuccessful.", "in which treatment didn't go well.", "that didn't meet treatment goals."}}
 
 var howCouldItHaveGoneDifferently = &QuestionPart{[]string{"How could it have gone differently", "Why did it not go well", "Why did it end that way", "How did you respond to the situation"}}
 
@@ -64,6 +64,6 @@ func buildQuestionsList() []*Question {
 	questions = append(questions, &Question{[]*QuestionPart{what, defines, aGood, internshipSite}})
 
 	questions = append(questions, &Question{[]*QuestionPart{describe, aCase, thatWasUnsuccessful, howCouldItHaveGoneDifferently}})
-	
+
 	return questions
 }
