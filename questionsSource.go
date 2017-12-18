@@ -1,9 +1,5 @@
 package main
 
-type QuestionSource struct {
-
-}
-
 var howDidYou = &QuestionPart{[]string{"How did you", "Why did you", "What made you"}}
 
 var getInterestedIn = &QuestionPart{[]string{"get interested in", "choose", "become interested in"}}
@@ -20,9 +16,35 @@ var areYourStrengthsAsACandidate = &QuestionPart{[]string{"is your main strength
 
 var areYourWeaknessesAsACandidate = &QuestionPart{[]string{"is your main weakness", "are your greatest weaknesses", "is an area you'd like to improve in during internship", "would you need to most help with from your supervisor"}}
 
+var whatIs = &QuestionPart{[]string{"What is"}}
 
+var aPsychologists = &QuestionPart{[]string{"a psychologist's", "a therapist's"}}
 
-func (source *QuestionSource) buildQuestionsList() []*Question {
+var role = &QuestionPart{[]string{"role", "duty", "responsiblity"}}
+
+var onATeam = &QuestionPart{[]string{"on a multidisciplinary team", "within their multidisciplinary team"}}
+
+var listYour = &QuestionPart{[]string{"Please describe your", "List your", "What are your"}}
+
+var careerGoals = &QuestionPart{[]string{"career goals", "internship goals", "goals for the next year? How about the next 10"}}
+
+var defines = &QuestionPart{[]string{"defines", "makes"}}
+
+var aGood = &QuestionPart{[]string{"a good", "your ideal", "the best possible", "great"}}
+
+var supervisor = &QuestionPart{[]string{"supervisor", "mentor", "teacher"}}
+
+var internshipSite = &QuestionPart{[]string{"site", "internship", "internship site"}}
+
+var describe = &QuestionPart{[]string{"Describe", "Talk about", "Walk through"}}
+
+var aCase = &QuestionPart{[]string{"a case of yours", "one of your patients", "a treatment case"}}
+
+var thatWasUnsuccessful = &QuestionPart{[]string{"that was unsuccessful.", "which didn't go well.", "that didn't meet treatment goals."}}
+
+var howCouldItHaveGoneDifferently = &QuestionPart{[]string{"How could it have gone differently", "Why did it not go well", "Why did it end that way", "How did you respond to the situation"}}
+
+func buildQuestionsList() []*Question {
 	var questions []*Question
 
 	questions = append(questions, &Question{[]*QuestionPart{howDidYou, getInterestedIn, yourResearch}})
@@ -33,5 +55,15 @@ func (source *QuestionSource) buildQuestionsList() []*Question {
 
 	questions = append(questions, &Question{[]*QuestionPart{what, areYourWeaknessesAsACandidate}})
 
+	questions = append(questions, &Question{[]*QuestionPart{whatIs, aPsychologists, role, onATeam}})
+
+	questions = append(questions, &Question{[]*QuestionPart{listYour, careerGoals}})
+
+	questions = append(questions, &Question{[]*QuestionPart{what, defines, aGood, supervisor}})
+
+	questions = append(questions, &Question{[]*QuestionPart{what, defines, aGood, internshipSite}})
+
+	questions = append(questions, &Question{[]*QuestionPart{describe, aCase, thatWasUnsuccessful, howCouldItHaveGoneDifferently}})
+	
 	return questions
 }
