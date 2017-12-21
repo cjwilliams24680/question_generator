@@ -150,7 +150,7 @@ var about = &QuestionPart{[]string{"about", "on"}}
 
 var psychologists = &QuestionPart{[]string{"psychologists", "therapists"}}
 
-var havingPrescriptionPrivileges = &QuestionPart{[]string{"havingPrescriptionPrivileges"}}
+var havingPrescriptionPrivileges = &QuestionPart{[]string{"having prescription privileges"}}
 
 var whatKindsOf = &QuestionPart{[]string{"What kinds of", "What types of"}}
 
