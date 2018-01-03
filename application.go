@@ -128,7 +128,7 @@ var anAssessment = &QuestionPart{[]string{"an assessment", "an instrument", "a t
 
 var withWhichYouFeelCompetent = &QuestionPart{[]string{"with which you feel competent", "which you can confidently use", "with which you extremely confident", "which you are confident using"}}
 
-var whatIsYourOpinion = &QuestionPart{[]string{"What is you opinion"}}
+var whatIsYourOpinion = &QuestionPart{[]string{"What is your opinion"}}
 
 var onProjectiveTests = &QuestionPart{[]string{"on projective tests", "of dynamic approaches"}} //todo are there any other things which would also be applicable to these questions?
 
